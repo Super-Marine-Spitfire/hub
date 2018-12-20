@@ -1,0 +1,33 @@
+noStroke();
+fill(0, 150, 255);
+var x = 0;
+var y = 0;
+var Case = 0;
+draw = function() {
+    background(255, 255, 255);
+    rect(200, 200, x - 200, y - 200);
+    if(x === 0 && y === 0) {
+        Case = 1;
+    }
+    if(x === 400 && y === 0) {
+        Case = 2;
+    }
+    if(x === 400 && y === 400) {
+        Case = 3;
+    }
+    if(x === 0 && y === 400) {
+        Case = 4;
+    }
+    if (Case === 1) {
+        x++;
+    }
+    if (Case === 2) {
+        y++;
+    }
+    if (Case === 3) {
+        x--;
+    }
+    if (Case === 4) {
+        y--;
+    }
+};
